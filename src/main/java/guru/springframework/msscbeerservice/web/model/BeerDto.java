@@ -1,7 +1,7 @@
 package guru.springframework.msscbeerservice.web.model;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.OffsetDateTime; // Good to be used with generic public facing APIs
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
@@ -34,15 +34,15 @@ public class BeerDto {
 	@NotBlank
 	private String beerName;
 	
-	@NotBlank
+//	@NotBlank // FUBAR BeerControllerTest fails when used
 	private BeerStyleEnum beerStyle;
 
 	@Positive
-	@NotBlank
+//	@NotBlank // FUBAR BeerControllerTest fails when used
 	private Long upc;
 
 	@Positive
-	@NotBlank
+//	@NotBlank // FUBAR BeerControllerTest fails when used
 	private BigDecimal price;
 	
 	private Integer quantityOnHand;

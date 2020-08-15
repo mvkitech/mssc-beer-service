@@ -1,0 +1,11 @@
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\bootstrap\BeerLoader.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\mappers\DateMapper.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\MsscBeerServiceApplication.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\model\BeerDto.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\repositories\BeerRepository.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\model\BeerPagedList.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\mappers\BeerMapper.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\domain\Beer.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\controller\MvcExceptionHandler.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\controller\BeerController.java
+C:\Training\courses\spring\Spring Microservices Course\mssc-beer-service\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\model\BeerStyleEnum.java

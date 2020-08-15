@@ -1,7 +1,7 @@
 package guru.springframework.msscbeerservice.domain;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.sql.Timestamp; // Good to be used with databases
 import java.util.UUID;
 
 import javax.persistence.Column;

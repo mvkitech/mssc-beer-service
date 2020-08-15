@@ -1,5 +1,6 @@
 package guru.springframework.msscbeerservice.web.controller;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import guru.springframework.msscbeerservice.web.model.BeerDto;
+import guru.springframework.msscbeerservice.web.model.BeerStyleEnum;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -31,25 +33,32 @@ public class BeerControllerTests {
                .andExpect(status().isOk());
     }
 
-// FUBAR @Validation annotation changes in BeerController during Lesson 70 broke this test   
-//    @Test
-//    void saveNewBeer() throws Exception {
-//        BeerDto beerDto = BeerDto.builder().build();
-//        String beerDtoJson = objectMapper.writeValueAsString(beerDto);
-//        mockMvc.perform(post("/api/v1/beer/")
-//               .contentType(MediaType.APPLICATION_JSON)
-//               .content(beerDtoJson))
-//               .andExpect(status().isCreated());
-//    }
+    @Test
+    void saveNewBeer() throws Exception {
+        BeerDto beerDto = getValidBeerDto();
+        String beerDtoJson = objectMapper.writeValueAsString(beerDto);
+        mockMvc.perform(post("/api/v1/beer/")
+               .contentType(MediaType.APPLICATION_JSON)
+               .content(beerDtoJson))
+               .andExpect(status().isCreated());
+    }
 
-// FUBAR @Validation annotation changes in BeerController during Lesson 70 broke this test   
-//    @Test
-//    void updateBeerById() throws Exception {
-//        BeerDto beerDto = BeerDto.builder().build();
-//        String beerDtoJson = objectMapper.writeValueAsString(beerDto);
-//        mockMvc.perform(put("/api/v1/beer/" + UUID.randomUUID().toString())
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(beerDtoJson))
-//                .andExpect(status().isNoContent());
-//    }
+    @Test
+    void updateBeerById() throws Exception {
+        BeerDto beerDto = getValidBeerDto();
+        String beerDtoJson = objectMapper.writeValueAsString(beerDto);
+        mockMvc.perform(put("/api/v1/beer/" + UUID.randomUUID().toString())
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(beerDtoJson))
+                .andExpect(status().isNoContent());
+    }
+
+    BeerDto getValidBeerDto() {
+        return BeerDto.builder()
+                .beerName("My Beer")
+                .beerStyle(BeerStyleEnum.ALE)
+                .price(new BigDecimal("2.99"))
+                .upc(123123123123L)
+                .build();
+    }
 }
